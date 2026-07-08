@@ -3,7 +3,7 @@
 
 cask "hiclaude" do
   version "0.1.0"
-  sha256 "95c2d963156a5211a6f1983d0505a78ef97d28d864fad798a5487de68a0a52b8"
+  sha256 "05e66eb53c226302b158bc4aacca5425b1750bf4e680fb5692d810b9c2f8121c"
 
   url "https://github.com/hayashirafael/hiclaude/releases/download/v#{version}/HiClaude-#{version}.dmg"
   name "HiClaude"
