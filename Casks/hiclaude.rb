@@ -2,8 +2,8 @@
 # frozen_string_literal: true
 
 cask "hiclaude" do
-  version "0.1.0"
-  sha256 "05e66eb53c226302b158bc4aacca5425b1750bf4e680fb5692d810b9c2f8121c"
+  version "0.2.0"
+  sha256 "cfa3dff36e7c2bf5745ff276ecae3cc511e7bd2aaea33fc4dd27098f9b93cc98"
 
   url "https://github.com/hayashirafael/hiclaude/releases/download/v#{version}/HiClaude-#{version}.dmg"
   name "HiClaude"
