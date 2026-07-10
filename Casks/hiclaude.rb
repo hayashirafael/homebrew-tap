@@ -2,12 +2,12 @@
 # frozen_string_literal: true
 
 cask "hiclaude" do
-  version "0.3.0"
-  sha256 "a0432f14cf7d8f875f9f6de913ea9966a8ef189a4903065b13e3dba8efa21cf2"
+  version "0.4.0"
+  sha256 "f235aded76f7bc5b5fcc156fc8752ff851473af9492c06fc23591ce91e1c8037"
 
-  url "https://github.com/hayashirafael/hiclaude/releases/download/v#{version}/HiClaude-#{version}.dmg"
-  name "HiClaude"
-  desc "Menu bar app that opens the Claude plan's 5-hour usage window on a schedule"
+  url "https://github.com/hayashirafael/hiclaude/releases/download/v#{version}/HiYashi-#{version}.dmg"
+  name "HiYashi"
+  desc "Menu bar scheduler for Claude and Codex usage windows and commands"
   homepage "https://github.com/hayashirafael/hiclaude"
 
   livecheck do
@@ -17,18 +17,18 @@ cask "hiclaude" do
 
   depends_on macos: :ventura
 
-  app "HiClaude.app"
+  app "HiYashi.app"
 
   zap trash: "~/Library/Preferences/dev.hiclaude.HiClaude.plist"
 
   caveats <<~EOS
-    HiClaude is ad-hoc signed (not notarized — no paid Apple Developer account).
+    HiYashi is ad-hoc signed (not notarized — no paid Apple Developer account).
     On first launch, macOS Gatekeeper will block it. To open it:
 
       System Settings → Privacy & Security → "Open Anyway"
 
     or clear the quarantine flag yourself:
 
-      xattr -dr com.apple.quarantine "#{appdir}/HiClaude.app"
+      xattr -dr com.apple.quarantine "#{appdir}/HiYashi.app"
   EOS
 end
