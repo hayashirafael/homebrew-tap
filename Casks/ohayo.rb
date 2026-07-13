@@ -2,8 +2,8 @@
 # frozen_string_literal: true
 
 cask "ohayo" do
-  version "1.1.0"
-  sha256 "528a0035d6a12044477765fbe16208f29368e0422635faad40362528a7083623"
+  version "1.1.1"
+  sha256 "6820775a3f0600133ddb668bb42bf939054d2d4156094565e69e141428a93592"
 
   url "https://github.com/hayashirafael/ohayo/releases/download/v#{version}/Ohayo-#{version}.dmg"
   name "Ohayo"
