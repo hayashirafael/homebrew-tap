@@ -2,8 +2,8 @@
 # frozen_string_literal: true
 
 cask "ohayo" do
-  version "1.1.1"
-  sha256 "6820775a3f0600133ddb668bb42bf939054d2d4156094565e69e141428a93592"
+  version "1.2.0"
+  sha256 "c3d0c278270438c1db1471be8800fddea9faffbc71bfa8073326925bd79ace5b"
 
   url "https://github.com/hayashirafael/ohayo/releases/download/v#{version}/Ohayo-#{version}.dmg"
   name "Ohayo"
@@ -15,6 +15,8 @@ cask "ohayo" do
     strategy :github_latest
   end
 
+  auto_updates true
+
   depends_on macos: :ventura
 
   app "Ohayo.app"
@@ -22,13 +24,9 @@ cask "ohayo" do
   zap trash: "~/Library/Preferences/io.github.hayashirafael.Ohayo.plist"
 
   caveats <<~EOS
-    Ohayo is ad-hoc signed (not notarized — no paid Apple Developer account).
-    On first launch, macOS Gatekeeper will block it. To open it:
+    Interactive Claude/Codex tasks open Terminal. On first use, macOS may ask
+    you to allow Ohayo to automate Terminal in:
 
-      System Settings → Privacy & Security → "Open Anyway"
-
-    or clear the quarantine flag yourself:
-
-      xattr -dr com.apple.quarantine "#{appdir}/Ohayo.app"
+      System Settings → Privacy & Security → Automation
   EOS
 end
